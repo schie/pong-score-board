@@ -1,0 +1,13 @@
+<div class="tile is-parent" (click)="incrementBtnClick($event)">
+  <article class="tile is-child notification is-{{ color }} {{ animatedClass }}">
+    <div class="content">
+      <!-- <p class="title">Tall tile</p> -->
+      <!-- <p class="subtitle">With even more content</p> -->
+      <div class="content">
+        <!-- Content -->
+        <h1 class="score has-text-centered has-text-white-bis">{{ points || 0}}</h1>
+      </div>
+    </div>
+  </article>
+</div>
+

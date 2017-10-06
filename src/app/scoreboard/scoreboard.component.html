@@ -1,0 +1,15 @@
+<section class="hero is-medium is-dark is-bold">
+  <div class="hero-body">
+    <!-- <div class="container"> -->
+      <div class="tile is-ancestor">
+        <div class="tile is-parent" *ngFor="let color of ['danger', 'info']; let i = index">
+          <app-team-tile
+            [color]="color"
+            (idSet)="idSet($event)"
+            (pointsChange)="pointsChanged($event)"
+            [currentServer]="server">
+          </app-team-tile>
+        </div>
+      </div>
+    </div>
+  </section>
