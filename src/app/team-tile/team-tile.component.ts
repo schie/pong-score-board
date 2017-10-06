@@ -11,7 +11,7 @@ export class TeamTileComponent implements OnInit {
   private _currentServer: string;
   @Input() set currentServer(serverID: string) {
     this._currentServer = serverID;
-    this.animatedClass = this.id == serverID ? 'animated infinite pulse' : '';
+    this.animatedClass = this.id === serverID ? 'animated infinite pulse' : '';
   }
   get currentServer(): string {
     return this._currentServer;
@@ -34,5 +34,11 @@ export class TeamTileComponent implements OnInit {
     this.points = this.points + 1;
     this.pointsChange.emit({ id: this.id, points: this.points});
   }
-
+  decrementBtnClick(ev: any) {
+    if (this.points === 0) {
+      return;
+    }
+    this.points = this.points - 1;    // have to null out the increment and remove one point from the total.
+    this.pointsChange.emit({ id: this.id, points: this.points});
+  }
 }
