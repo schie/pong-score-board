@@ -1,15 +1,15 @@
 <div class="tile is-parent" (click)="incrementBtnClick($event)">
-    <article class="tile is-child notification is-{{ color }} {{ animatedClass }}">
+    <article class="tile is-child notification is-{{ color }} {{ animatedClass }} is-unselectable">
         <div class="content">
             <!-- <p class="title">Team {{ color }}</p> -->
             <!-- <p class="subtitle">With even more content</p> -->
             <div class="content">
                 <!-- Content -->
-                <h1 class="score has-text-centered has-text-white-bis is-unselectable">{{ points || 0}}</h1>
+                <h1 class="score has-text-centered has-text-white-bis">{{ points || 0}}</h1>
             </div>
         </div>
-        <div class="content" (click)="decrementBtnClick($event); $event.stopPropagation()">
-            <h1 class="decrement has-text-centered has-text-white-bis is-unselectable">- Decrement -</h1>
+        <div class="content has-text-centered" (click)="decrementBtnClick($event); $event.stopPropagation()">
+            <i class="fa fa-minus-square fa-5x"></i>
         </div>
     </article>
 </div>
