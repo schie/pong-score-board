@@ -35,10 +35,7 @@ export class TeamTileComponent implements OnInit {
     this.pointsChange.emit({ id: this.id, points: this.points});
   }
   decrementBtnClick(ev: any) {
-    if (this.points === 0) {
-      return;
-    }
-    this.points = this.points - 1;    // have to null out the increment and remove one point from the total.
+    this.points = (this.points > 0) ? this.points - 1 : 0;    // have to null out the increment and remove one point from the total.
     this.pointsChange.emit({ id: this.id, points: this.points});
   }
 }
