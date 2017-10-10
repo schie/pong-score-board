@@ -21,7 +21,7 @@ export class ScoreboardComponent implements OnInit {
   pointsChanged(ev: any) {
     this.boardScores[ev.id] = ev.points;
     let x = _.sum(_.values(this.boardScores));
-    if (x % 5 == 0) {
+    if (x % 5 === 0) {
       let keys = _.keys(this.boardScores);
       let idx = _.indexOf(keys, this.server);
       this.server = keys[(idx + 1) % keys.length];
