@@ -25,8 +25,9 @@ export class ScoreboardComponent implements OnInit {
       let keys = _.keys(this.boardScores);
       let idx = _.indexOf(keys, this.server);
       this.server = keys[(idx + 1) % keys.length];
-      var msg = new SpeechSynthesisUtterance('Change Server');
-      window.speechSynthesis.speak(msg);
+      let msg = new SpeechSynthesisUtterance('Change Server');
+      msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name === 'Google UK English Female'; })[0];
+      _.speechSynthesis.speak(msg);
     }
   }
 
