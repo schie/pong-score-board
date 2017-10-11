@@ -5,7 +5,7 @@
             <!-- <p class="subtitle">With even more content</p> -->
             <div class="content">
                 <!-- Content -->
-                <h1 class="score has-text-centered has-text-white-bis">{{ points || 0}}</h1>
+                <h1 class="score has-text-centered has-text-white-bis" style="margin-bottom: 0.15em;">{{ points || 0}}</h1>
             </div>
         </div>
         <div class="content has-text-centered" (click)="decrementBtnClick($event); $event.stopPropagation()">
