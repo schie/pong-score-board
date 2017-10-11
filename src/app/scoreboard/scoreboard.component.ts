@@ -37,8 +37,8 @@ export class ScoreboardComponent implements OnInit {
       }
     } else if (x > 40) { // score is around 20/20
       switch (scoreValues[1] - scoreValues[0]) {
-        case 0 : msg.text = 'so close but yet so far. '; break;
-        case 1 : msg.text = 'this is getting close. '; break;
+        case 0 : msg.text = 'so close but yet so far. You better not be using the Game ball.'; break;
+        case 1 : msg.text = 'this is getting close. Purple ball is in effect.'; break;
         case 2 : msg.text = 'You WIN!'; winCondition = true; break;
         case 4 : msg.text = 'I hope you are happy with yourself'; break;
         default : msg.text = 'you already won, what are you trying to prove?'; winCondition = true; break;
