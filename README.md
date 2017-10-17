@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
 
+This project is deployed to [github pages](https://pages.github.com) using [angular-cli-ghpages](https://github.com/angular-buch/angular-cli-ghpages).
+```bash
+$ npm install -g angular-cli-ghpages
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -10,9 +15,19 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
-## Build
+## Build &amp; Deployment
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+Run the follow command to build for deployment to github pages:
+```bash
+$ ng build --prod --base-href "/pong-score-board/"
+```
+
+To Deploy to gh pages using `angular-cli-gh-page`, run the following:
+```bash
+$ angular-cli-ghpages
+```
 
 ## Running unit tests
 
