@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import "variables";
+//@import "variables";
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
 @import "node_modules/bulma/bulma";
 @import "node_modules/font-awesome/scss/font-awesome";
 @import "node_modules/animate.css/animate";
